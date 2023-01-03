@@ -1,0 +1,32 @@
+.featured-events {
+    /* styles for the featured-events block go here */
+  
+    &__title {
+      /* styles for the featured-events__title element go here */
+    }
+  
+    &__cards {
+      /* styles for the featured-events__cards element go here */
+  
+      &__card {
+        /* styles for the featured-events__card element go here */
+  
+        &-title {
+          /* styles for the featured-events__card-title element go here */
+        }
+  
+        &-toggle {
+          /* styles for the featured-events__card-toggle element go here */
+        }
+  
+        &-text {
+          /* styles for the featured-events__card-text element go here */
+        }
+  
+        &-cta {
+          /* styles for the featured-events__card-cta element go here */
+        }
+      }
+    }
+  }
+  
