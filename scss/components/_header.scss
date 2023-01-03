@@ -2,13 +2,14 @@
     background: $color-grape;
     padding-top: 46px;
     padding-bottom: 42px;
+     /* styles for the menu container element go here */
     .container{
-        max-width: $container-width;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+     /* styles for the menu__list element go here */
     &__list{
         display: flex;
         list-style: none;
@@ -16,6 +17,7 @@
         margin: 0;
     }
     &__link{
+         /* styles for the menu__link element go here */
         margin-left: 14px;
         text-decoration: none;
         color: $color-LightSage;
@@ -24,7 +26,21 @@
         &--active,
         &:hover{
             color: $color-skyBlue;
+            font-weight: 700;
             @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
         }
+    }
+}
+
+
+// IPAD PRO
+@include ipad-pro{
+    .menu__logo{
+       img{
+            max-width: 142px;
+       }
+    }
+    .menu{
+        padding: 32px 0;
     }
 }
