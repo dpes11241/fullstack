@@ -1,0 +1,30 @@
+.menu{
+    background: $color-grape;
+    padding-top: 46px;
+    padding-bottom: 42px;
+    .container{
+        max-width: $container-width;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__link{
+        margin-left: 14px;
+        text-decoration: none;
+        color: $color-LightSage;
+        font-size: 16px;
+        @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+        &--active,
+        &:hover{
+            color: $color-skyBlue;
+            @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+        }
+    }
+}

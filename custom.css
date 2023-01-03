@@ -1,1 +1,57 @@
-@font-face{font-family:"Mark Pro";src:url("../fonts/") format("woff2"),url("../fonts/MarkPro-Bold.woff") format("woff");font-weight:bold;font-style:normal;font-display:swap}@font-face{font-family:"Mark Pro";src:url("../fonts/MarkPro.woff2") format("woff2"),url("../fonts/MarkPro.woff") format("woff");font-weight:normal;font-style:normal;font-display:swap}*{font-family:"Mark Pro"}/*# sourceMappingURL=custom.css.map */
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./fonts/") format("woff2"), url("./fonts/MarkPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./fonts/MarkPro.woff2") format("woff2"), url("./fonts/MarkPro.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "Mark Pro";
+}
+
+.menu {
+  background: #66619F;
+  padding-top: 46px;
+  padding-bottom: 42px;
+}
+.menu .container {
+  max-width: 1176px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu__link {
+  margin-left: 14px;
+  text-decoration: none;
+  color: #F8F8F1;
+  font-size: 16px;
+  -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.menu__link--active, .menu__link:hover {
+  color: #97DAEB;
+  -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=custom.css.map */
