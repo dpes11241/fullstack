@@ -1,0 +1,93 @@
+#search-events {
+  background: $color-sage;
+  padding-top: 96px;
+  .featured-events {
+    margin-bottom: 0;
+    &__card {
+      width: calc(33.33% - 48px);
+    }
+    &__front > img {
+      height: 260px;
+    }
+    &__card-title {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 20px;
+      margin-top: 26px;
+      margin-left: 25px;
+    }
+    &__card-open img {
+      width: 36px;
+    }
+    &__back p {
+      font-size: 16px;
+    }
+    &__back img {
+      width: 26px;
+    }
+  }
+}
+
+// SCSS for search bar
+input::placeholder {
+  color: $color-nightSky;
+}
+.search-bar {
+  background: $color-grape;
+  margin-bottom: 90px;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translate(16px, -16px);
+  }
+  &__input {
+    flex: 1;
+    padding: 15px 22px;
+    border-radius: 0;
+    background: $color-searchInput;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    color: $color-nightSky;
+    border: 0;
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  &__button {
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    margin-right: 19px;
+  }
+}
+
+// SCSS for pagination
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    display: block;
+    padding: 0.5rem;
+    color: #333;
+    text-decoration: none;
+
+    &--prev,
+    &--next {
+      font-weight: bold;
+    }
+
+    &--num {
+      &.is-active {
+        font-weight: bold;
+      }
+    }
+  }
+}

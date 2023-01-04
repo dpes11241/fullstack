@@ -31,6 +31,9 @@ h3 {
   color: #211651;
   text-decoration: none;
 }
+.site-btn:hover {
+  color: #211651;
+}
 
 .site-link {
   font-size: 14px;
@@ -451,6 +454,7 @@ h3 {
 
 .news-slider {
   display: flex;
+  margin-bottom: 144px;
 }
 .news-slider__title {
   display: flex;
@@ -471,16 +475,19 @@ h3 {
 .news-slider__item {
   display: flex;
   align-items: center;
+  padding-top: 40px;
 }
 .news-slider__image-col {
   background: #97DAEB;
   max-width: 490px;
   margin-right: 98px;
 }
-.news-slider__image-col__image {
+.news-slider__image {
   max-width: 100%;
   height: auto;
   max-width: 490px;
+  position: relative;
+  transform: translate(35px, -40px);
 }
 .news-slider__catDate {
   display: flex;
@@ -511,6 +518,92 @@ h3 {
   color: #211651;
   max-width: 451px;
   margin-bottom: 32px;
+}
+
+#search-events {
+  background: #87AB87;
+  padding-top: 96px;
+}
+#search-events .featured-events {
+  margin-bottom: 0;
+}
+#search-events .featured-events__card {
+  width: calc(33.33% - 48px);
+}
+#search-events .featured-events__front > img {
+  height: 260px;
+}
+#search-events .featured-events__card-title {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  margin-top: 26px;
+  margin-left: 25px;
+}
+#search-events .featured-events__card-open img {
+  width: 36px;
+}
+#search-events .featured-events__back p {
+  font-size: 16px;
+}
+#search-events .featured-events__back img {
+  width: 26px;
+}
+
+input::placeholder {
+  color: #211651;
+}
+
+.search-bar {
+  background: #66619F;
+  margin-bottom: 90px;
+}
+.search-bar__wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transform: translate(16px, -16px);
+}
+.search-bar__input {
+  flex: 1;
+  padding: 15px 22px;
+  border-radius: 0;
+  background: #97DAEB;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 43px;
+  color: #211651;
+  border: 0;
+}
+.search-bar__input:focus {
+  border: 0;
+  outline: 0;
+}
+.search-bar__button {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  margin-right: 19px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination__link {
+  display: block;
+  padding: 0.5rem;
+  color: #333;
+  text-decoration: none;
+}
+.pagination__link--prev, .pagination__link--next {
+  font-weight: bold;
+}
+.pagination__link--num.is-active {
+  font-weight: bold;
 }
 
 @media only screen and (min-device-width: 1025px) {

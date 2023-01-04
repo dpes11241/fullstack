@@ -14,6 +14,7 @@ $color-body: #666666;
 $color-black: #000000;
 $color-ube: #683174;
 $color-field: #777777;
+$color-searchInput: #97DAEB;
 
 body{
     overflow-x: hidden;
@@ -44,6 +45,9 @@ h3{
     background: $color-sunflower;
     color: $color-nightSky;
     text-decoration: none;
+    &:hover{
+        color: $color-nightSky;
+    }
 }
 
 .site-link{

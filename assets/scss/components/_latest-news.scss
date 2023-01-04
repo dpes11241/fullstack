@@ -1,5 +1,6 @@
 .news-slider {
   display: flex;
+  margin-bottom: 144px;
   // Title with nav
   &__title {
     display: flex;
@@ -21,17 +22,20 @@
   &__item {
     display: flex;
     align-items: center;
+    padding-top: 40px;
   }
   //   IMAGE TAG
   &__image-col {
     background: $color-skyBlue;
     max-width: 490px;
     margin-right: 98px;
-    &__image {
-      max-width: 100%;
-      height: auto;
-      max-width: 490px;
-    }
+  }
+  &__image {
+    max-width: 100%;
+    height: auto;
+    max-width: 490px;
+    position: relative;
+    transform: translate(35px, -40px);
   }
   // CONTENT NEWS
 
