@@ -40,13 +40,26 @@ h3{
     align-items: center;
     font-size: 14px;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 1;
     letter-spacing: 0em;
     background: $color-sunflower;
     color: $color-nightSky;
     text-decoration: none;
+    @include transition(opacity 0.3s ease-in-out);
     &:hover{
         color: $color-nightSky;
+        opacity: 0.95;
+        @include transition(opacity 0.3s ease-in-out);
+    }
+    &--nightSky{
+        background: $color-nightSky;
+        color: $color-white;
+        @include transition(all 0.3s ease-in-out);
+        &:hover{
+            color: $color-white;
+            background: rgba($color-nightSky,0.95);
+            @include transition(all 0.3s ease-in-out);
+        }
     }
 }
 
