@@ -1,19 +1,82 @@
 .banner {
-  
+    margin-top: 52px;
     &__image {
       /* styles for the banner__image element go here */
+      margin-bottom: 8px;
+      max-width: 100%;
+      height: auto;
     }
   
     &__title {
       /* styles for the banner__title element go here */
+      font-family: $site-font;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 43px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 143px;
+      max-width: 852px;
     }
   
-    &__video {
-      /* styles for the banner__video element go here */
+    &__green{
+      /* styles for the banner__green element go here */
+      background: $color-sage;
+      .container{
+        position: relative;
+      }
+      [data-fancybox]{
+        position: relative;
+        top: -64px;
+        img{
+          @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+        }
+        &:hover{
+          img{
+            opacity: 0.95;
+            @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+          }
+          .banner__play{
+            transform: translate(-50%, -50%) scale(1.2);
+            @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+          }
+        }
+      }
+    }
+
+    &__play{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
     }
   
     &__content {
       /* styles for the banner__content element go here */
+      padding-bottom: 96px;
+      p{
+        color: $color-white;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 64px;
+        letter-spacing: 0em;
+        max-width: 1024px;
+      }
+    }
+
+    &__goUp{
+       /* styles for the banner__goUp element go here */
+       position: absolute;
+       top: 50%;
+       right: -72px;
+       transform: translate(-50%, -50%);
+       cursor: pointer;
+       @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+       &:hover{
+        opacity: 0.9;
+        @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+       }
     }
   }
   

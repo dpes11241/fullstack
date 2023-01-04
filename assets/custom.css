@@ -61,21 +61,133 @@
   .menu__logo img {
     max-width: 142px;
   }
+
   .menu {
     padding: 32px 0;
   }
 }
+.banner {
+  margin-top: 52px;
+}
 .banner__image {
   /* styles for the banner__image element go here */
+  margin-bottom: 8px;
+  max-width: 100%;
+  height: auto;
 }
 .banner__title {
   /* styles for the banner__title element go here */
+  font-family: "Mark Pro";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 143px;
+  max-width: 852px;
 }
-.banner__video {
-  /* styles for the banner__video element go here */
+.banner__green {
+  /* styles for the banner__green element go here */
+  background: #87AB87;
+}
+.banner__green .container {
+  position: relative;
+}
+.banner__green [data-fancybox] {
+  position: relative;
+  top: -64px;
+}
+.banner__green [data-fancybox] img {
+  -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.banner__green [data-fancybox]:hover img {
+  opacity: 0.95;
+  -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.banner__green [data-fancybox]:hover .banner__play {
+  transform: translate(-50%, -50%) scale(1.2);
+  -webkit-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.banner__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .banner__content {
   /* styles for the banner__content element go here */
+  padding-bottom: 96px;
+}
+.banner__content p {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  max-width: 1024px;
+}
+.banner__goUp {
+  /* styles for the banner__goUp element go here */
+  position: absolute;
+  top: 50%;
+  right: -72px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.banner__goUp:hover {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.featured-events {
+  /* styles for the featured-events block go here */
+}
+.featured-events__title {
+  /* styles for the featured-events__title element go here */
+}
+.featured-events__cards {
+  /* styles for the featured-events__cards element go here */
+}
+.featured-events__cards__card {
+  /* styles for the featured-events__card element go here */
+}
+.featured-events__cards__card-title {
+  /* styles for the featured-events__card-title element go here */
+}
+.featured-events__cards__card-toggle {
+  /* styles for the featured-events__card-toggle element go here */
+}
+.featured-events__cards__card-text {
+  /* styles for the featured-events__card-text element go here */
+}
+.featured-events__cards__card-cta {
+  /* styles for the featured-events__card-cta element go here */
 }
 
 @media only screen and (min-device-width: 1025px) {

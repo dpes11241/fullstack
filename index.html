@@ -2,75 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullstack</title>
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
-       
-    <link rel="stylesheet" href="assets/custom.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fullstack</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+  <link rel="stylesheet" href="assets/custom.css" />
 </head>
 
 <body>
+  <!-- HEADER STARTS -->
+  <nav class="menu">
+    <div class="container">
+      <a class="menu__logo" href="#">
+        <img src="assets/images/logo.svg" alt="" />
+      </a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link menu__link--active" href="#">Why Elevate</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Plan Pillars</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Latest News</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Campaign</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- HEADER STARTS -->
-    <nav class="menu">
+  <!-- HEADER ENDS -->
+
+  <!-- BANNER STARTS -->
+  <div class="banner">
+    <div class="container">
+      <img class="banner__image" src="assets/images/Elevate logomark.svg" alt="Banner image" />
+      <h1 class="banner__title">
+        Elevate is EL Education’s multi-year plan to increase equity in K-12
+        public education nationwide.
+      </h1>
+    </div>
+
+      <div class="banner__green">
         <div class="container">
-            <a class="menu__logo" href="#">
-                <img src="assets/images/logo.svg" alt="">
-            </a>
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link menu__link--active" href="#">Why Elevate</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Plan Pillars</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Latest News</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Campaign</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- HEADER ENDS -->
-
-    
-    <!-- BANNER STARTS -->
-    <div class="banner">
-        <img class="banner__image" src="assets/images/Elevate logomark.svg" alt="Banner image">
-        <h1 class="banner__title">Elevate is EL Education’s multi-year plan to increase equity in K-12 public education nationwide. </h1>
-        <a data-fancybox href="https://vimeo.com/95673122?color=ff0000">
-           vimeo
+          <a data-fancybox href="https://vimeo.com/95673122?color=ff0000">
+            <img class="banner__vimeoImg" src="assets/images/Amana-0819-IMG_3323 2.png" alt="vime-img" />
+            <img class="banner__play" src="assets/images/Action Button.svg" alt="action-btn" />
           </a>
-        
-        <div class="banner__content">
-          <p>Public education is the single best driver to grow our national prosperity, to lift up our culture of innovation, and to nurture America’s global promise and leadership.</p>
+    
+          <div class="banner__content">
+            <p>
+              Public education is the single best driver to grow our national
+              prosperity, to lift up our culture of innovation, and to nurture
+              America’s global promise and leadership.
+            </p>
+          </div>
+          <img id="scroll-to-top-button" class="banner__goUp" src="assets/images/go-up.svg" alt="go-up">
         </div>
       </div>
-    <!-- BANNER ENDS -->
+  </div>
+  <!-- BANNER ENDS -->
 
-
-    <!-- FEATURED STARTS -->
-    <section class="featured-events">
-        <h2 class="featured-events__title">Featured Events</h2>
-        <div class="featured-events__cards">
-          <div class="featured-events__card">
-            <h3 class="featured-events__card-title">Race disproportionately predicts student outcomes in school and in conventional measures of life success.</h3>
-            <button class="featured-events__card-open">+</button>
-            <div class="featured-events__card-text">
-              <p>Elevate develops new models for transforming school systems, deepening partnerships between EL and school districts and networks around the nation
-               </p>
-               <p><i> See our progress on systems change.</i></p>
-               <a href="#" class="featured-events__card-cta">Shorter CTA Text</a>
-               <button class="featured-events__card-close">-</button>
-            </div>
-          </div>
+  <!-- FEATURED STARTS -->
+  <section class="featured-events">
+    <h2 class="featured-events__title">Featured Events</h2>
+    <div class="featured-events__cards">
+      <div class="featured-events__card">
+        <h3 class="featured-events__card-title">
+          Race disproportionately predicts student outcomes in school and in
+          conventional measures of life success.
+        </h3>
+        <button class="featured-events__card-open">+</button>
+        <div class="featured-events__card-text">
+          <p>
+            Elevate develops new models for transforming school systems,
+            deepening partnerships between EL and school districts and
+            networks around the nation
+          </p>
+          <p><i> See our progress on systems change.</i></p>
+          <a href="#" class="featured-events__card-cta">Shorter CTA Text</a>
+          <button class="featured-events__card-close">-</button>
         </div>
-        
-      </section>
-      <!-- FEATURED ENDS -->
-      
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="assets/js/custom.js"></script>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURED ENDS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
