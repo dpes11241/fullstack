@@ -6,3 +6,23 @@ $color-grape: #66619F;
 $color-LightSage: #F8F8F1;
 $color-sage: #87AB87;
 $color-skyBlue: #97DAEB;
+$color-nightSky: #211651;
+$color-persimmon: #EE5A46;
+$color-duckling: #FFDDA2;
+$color-sunflower: #FFA409;
+
+.site-btn{
+    min-width: 148px;
+    border-radius: 0px;
+    padding: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    background: $color-sunflower;
+    color: $color-nightSky;
+    text-decoration: none;
+}
