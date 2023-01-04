@@ -1,20 +1,17 @@
 .featured-events {
     /* styles for the featured-events block go here */
-  
+    margin-bottom: 107px;
     &__title {
       /* styles for the featured-events__title element go here */
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 86px;
-      letter-spacing: 0em;
       margin-top: 112px;
       margin-bottom: 94px;
+      color: $color-nightSky;
     }
   
     &__cards {
       /* styles for the featured-events__cards element go here */
       display: flex;
-      margin: -24px;
+      margin: 0 -24px;
       flex-wrap: wrap;
     }
 
@@ -94,6 +91,9 @@
         line-height: 32px;
         letter-spacing: 0em;
       }
+    }
+    .site-link{
+      margin-top: 14px;
     }
   }
   

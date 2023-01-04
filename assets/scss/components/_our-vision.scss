@@ -1,0 +1,103 @@
+.vision {
+    &__title {
+      color: $color-nightSky;
+      margin-bottom: 16px;
+    }
+    &__content {
+        margin-bottom: 34px;
+        max-width: 955px;
+      p{
+        color: $color-body;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    &__tab {
+        /* styles for the vision__tab element go here */
+        .nav{
+            background: $color-skyBlue;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+        .nav-pills{
+            li{
+                width: 33.33%;
+                position: relative;
+                right: -16px;
+                &:not(:last-child){
+                    padding-right: 7px;
+                }
+            }
+            .nav-link{
+                background: $color-duckling;
+                color: $color-grape;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                position: relative;
+                top: -14px;
+                width: 100%;
+                border-radius: 0;
+                height: 83px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                @include transition(transform 0.3s ease-in-out, transform 0.3s ease-in-out);
+                &.active{
+                    background-color: $color-persimmon;
+                    color: $color-white;
+                    transform: translate(16px, -8px);
+                    z-index: 1;
+                    @include transition(transform 0.3s ease-in-out, transform 0.3s ease-in-out);
+                }
+            }
+        }
+    }
+  }
+
+//   TAB INFO
+.info {
+    margin-bottom: 90px;
+    padding-left: 15px;
+    &__title {
+        color: $color-persimmon;
+        margin-top: 9px;
+        margin-bottom: 8px;
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        color: $color-black;
+        margin-bottom: 48px;
+    }
+    &__content {
+      display: flex;
+    }
+    &__col {
+        width: 50%;
+        &--left,
+        &--right{
+            position: relative;
+            padding-left: 20px;
+            color: $color-black;
+            b{
+                color: $color-black;
+            }
+            &:before{
+                content: "";
+                width: 5px;
+                height: 5px;
+                background: #000;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                top: 10px;
+                left: 6px;
+            }
+        }
+      }
+  }
+  
