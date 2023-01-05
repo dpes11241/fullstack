@@ -153,6 +153,12 @@ input::placeholder {
 
   .pagination {
     padding-bottom: 56px;
+    .pagination__link {
+      margin-right: 20px;
+    }
+    .pagination__link--next {
+        margin-left: 30px;
+    }
   }
 
   .search-bar {
