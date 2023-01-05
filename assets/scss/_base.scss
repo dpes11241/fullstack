@@ -16,7 +16,9 @@ $color-ube: #683174;
 $color-field: #777777;
 $color-searchInput: #97DAEB;
 
-body{
+
+.site-wrap {
+    // Control site overflow 
     overflow-x: hidden;
 }
 h2{
@@ -24,12 +26,28 @@ h2{
     font-weight: 700;
     line-height: 86px;
     letter-spacing: 0em;
+    @include ipad-pro {
+        font-size: 46px;
+        line-height: 86px;
+    }
+    @include iphone {
+        font-size: 23px;
+        line-height: 30px;
+    }
 }
 h3{
     font-size: 48px;
     font-weight: 700;
     line-height: 64px;
     letter-spacing: 0em;
+    @include ipad-pro {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    @include iphone {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
 .site-btn{
     min-width: 148px;
@@ -60,6 +78,11 @@ h3{
             background: rgba($color-nightSky,0.95);
             @include transition(all 0.3s ease-in-out);
         }
+    }
+    @include iphone{
+        font-size: 12px;
+        line-height: 18px;
+        padding: 8px;
     }
 }
 

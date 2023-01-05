@@ -1,35 +1,41 @@
 .vision {
     &__title {
-      color: $color-nightSky;
-      margin-bottom: 16px;
+        color: $color-nightSky;
+        margin-bottom: 16px;
     }
+
     &__content {
         margin-bottom: 80px;
         max-width: 955px;
-      p{
-        color: $color-body;
-        font-size: 24px;
-        line-height: 32px;
-      }
+
+        p {
+            color: $color-body;
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
 
     &__tab {
+
         /* styles for the vision__tab element go here */
-        .nav{
+        .nav {
             background: $color-skyBlue;
             max-width: 1120px;
             margin: 0 auto;
         }
-        .nav-pills{
-            li{
+
+        .nav-pills {
+            li {
                 width: 33.33%;
                 position: relative;
                 right: -16px;
-                &:not(:last-child){
+
+                &:not(:last-child) {
                     padding-right: 7px;
                 }
             }
-            .nav-link{
+
+            .nav-link {
                 background: $color-duckling;
                 color: $color-grape;
                 font-weight: 700;
@@ -44,7 +50,8 @@
                 align-items: center;
                 justify-content: center;
                 @include transition(transform 0.3s ease-in-out, transform 0.3s ease-in-out);
-                &.active{
+
+                &.active {
                     background-color: $color-persimmon;
                     color: $color-white;
                     transform: translate(16px, -8px);
@@ -54,17 +61,19 @@
             }
         }
     }
-  }
+}
 
 //   TAB INFO
 .info {
     margin-bottom: 90px;
     padding-left: 15px;
+
     &__title {
         color: $color-persimmon;
         margin-top: 9px;
         margin-bottom: 8px;
     }
+
     &__subtitle {
         font-size: 24px;
         font-weight: 700;
@@ -73,20 +82,25 @@
         color: $color-black;
         margin-bottom: 48px;
     }
+
     &__content {
-      display: flex;
+        display: flex;
     }
+
     &__col {
         width: 50%;
+
         &--left,
-        &--right{
+        &--right {
             position: relative;
             padding-left: 20px;
             color: $color-black;
-            b{
+
+            b {
                 color: $color-black;
             }
-            &:before{
+
+            &:before {
                 content: "";
                 width: 5px;
                 height: 5px;
@@ -98,6 +112,46 @@
                 left: 6px;
             }
         }
-      }
-  }
-  
+    }
+}
+
+
+
+
+// IPAD PRO
+@include ipad-pro {
+    .vision__content {
+        margin-bottom: 66px;
+        p{
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+}
+
+// Iphone
+@include iphone {
+    .vision__content p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .vision__tab .nav-pills .nav-link {
+        height: 50px;
+    }
+    .info__subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .info__content {
+        flex-wrap: wrap;
+    }
+    
+    .info__col--left, .info__col--right {
+        width: 100%;
+    }
+    
+    .info {
+        margin-bottom: 36px;
+    }
+}

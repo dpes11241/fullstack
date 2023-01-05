@@ -84,16 +84,19 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   padding-bottom: 70px;
+  margin-top: 80px;
 
   &__wrap {
     background: $color-grape;
     display: flex;
   }
-  &__wrap-sky{
+
+  &__wrap-sky {
     background: $color-skyBlue;
-    transform: translate(14px,-14px);
+    transform: translate(14px, -14px);
     padding: 11px 30px;
   }
+
   &__link {
     display: inline-flex;
     color: $color-black;
@@ -111,19 +114,23 @@ input::placeholder {
     border: 3px solid transparent;
     line-height: 1;
     @include transition(all 0.3s ease-in-out);
+
     &.is-active,
-    &:hover{
+    &:hover {
       background: $color-persimmon;
       border-color: $color-grape;
       @include transition(all 0.3s ease-in-out);
       color: $color-black;
     }
-    &--prev{
+
+    &--prev {
       margin-right: 44px;
     }
-    &--next{
+
+    &--next {
       margin-left: 74px;
     }
+
     &--prev,
     &--next {
       margin-top: -18px;
@@ -135,4 +142,53 @@ input::placeholder {
       }
     }
   }
+}
+
+
+// IPAD PRO
+@include ipad-pro {
+  #search-events .featured-events__card {
+    width: calc(50% - 48px);
+  }
+
+  .pagination {
+    padding-bottom: 56px;
+  }
+
+  .search-bar {
+    width: calc(100% - 15px);
+  }
+}
+
+
+// Iphone
+@include iphone {
+  .search-bar {
+    margin-bottom: 46px;
+    &__input {
+      font-size: 18px;
+      height: 52px;
+    }
+  
+    &__button svg {
+      width: 24px;
+    }
+  }
+ 
+  #search-events{
+    .featured-events__card {
+      width: 100%;
+      }
+
+      .featured-events__card-title {
+        font-size: 16px;
+      }
+
+      .featured-events__front>img {
+        height: 210px;
+      }
+  }
+  .pagination {
+    display: none;
+}
 }

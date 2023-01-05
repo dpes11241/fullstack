@@ -27,9 +27,10 @@ var MyNamespace = {
       });
     });
   },
-  slickSlider: function () {
+  slickSlider_News: function () {
     // Latest news slider
-    $(".news-slider__items").slick({
+    var getNews_sliderElem =   $(".news-slider__items");
+    getNews_sliderElem.slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -38,16 +39,57 @@ var MyNamespace = {
 
     // Goto previous slide
     $(".news-slider__left").click(function (e) {
-      $(".news-slider__items").slick("slickPrev");
+      getNews_sliderElem.slick("slickPrev");
     });
 
     // Goto next slide
     $(".news-slider__right").click(function (e) {
-      $(".news-slider__items").slick("slickNext");
+      getNews_sliderElem.slick("slickNext");
     });
+
   },
+  featuredEvents__cards: function(){
+    var getSliderElem =  $("#featured-events .featured-events__cards");
+    if( $(window).width() <= 1024 ){
+      // Only trigger slider if not initialized to avoid error on resize
+      if( !$('.featured-events__cards').hasClass('slick-initialized') ){
+        getSliderElem.slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        });
+      }
+    }else{
+      getSliderElem.slick('unslick');
+    }
+
+      // Goto previous slide
+      $(".featuredEvents__left").click(function (e) {
+        getSliderElem.slick("slickPrev");
+      });
+  
+      // Goto next slide
+      $(".featuredEvents__right").click(function (e) {
+        getSliderElem.slick("slickNext");
+      });
+    
+  },
+  mobileToggle: function(){
+      $('.menu_mobileTrigger').click(function(){
+        $(this).toggleClass('is-open')
+        $('.menu__list').slideToggle();
+      })
+  }
 };
 
 MyNamespace.scrollToTop();
 MyNamespace.toggleCard();
-MyNamespace.slickSlider();
+MyNamespace.slickSlider_News();
+MyNamespace.featuredEvents__cards();
+// Trigger Slider Destroy and resize for featured events
+window.addEventListener('resize', function(event){
+  MyNamespace.featuredEvents__cards();
+});
+MyNamespace.mobileToggle();
+

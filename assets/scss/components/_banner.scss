@@ -1,82 +1,170 @@
 .banner {
-    margin-top: 52px;
+  margin-top: 52px;
+
+  &__image {
+    /* styles for the banner__image element go here */
+    margin-bottom: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    /* styles for the banner__title element go here */
+    font-family: $site-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 143px;
+    max-width: 852px;
+    color: #2A3136;
+  }
+
+  &__green {
+    /* styles for the banner__green element go here */
+    background: $color-sage;
+
+    .container {
+      position: relative;
+    }
+
+    [data-fancybox] {
+      position: relative;
+      top: -64px;
+
+      img {
+        @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+      }
+
+      &:hover {
+        img {
+          opacity: 0.95;
+          @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+        }
+
+        .banner__play {
+          transform: translate(-50%, -50%) scale(1.2);
+          @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+        }
+      }
+    }
+  }
+
+  &__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+  }
+
+  &__content {
+    /* styles for the banner__content element go here */
+    padding-bottom: 96px;
+
+    p {
+      color: $color-white;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: 0em;
+      max-width: 1024px;
+    }
+  }
+
+  &__goUp {
+    /* styles for the banner__goUp element go here */
+    position: absolute;
+    top: 50%;
+    right: -72px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    @media (max-width:1600px) {
+      right: 0;
+    }
+
+    @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+
+    &:hover {
+      opacity: 0.9;
+      @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+    }
+  }
+}
+
+
+
+// IPAD PRO
+@include ipad-pro {
+  .banner {
     &__image {
-      /* styles for the banner__image element go here */
-      margin-bottom: 8px;
-      max-width: 100%;
-      height: auto;
+      max-width: 284px;
+      margin-bottom: 25px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 101px;
+    }
+
+    &__vimeoImg {
+      max-width: 678px;
+    }
+
+    &__content p {
+      font-size: 36px;
+      line-height: 45px;
+      max-width: 748px;
+    }
+
+    &__content {
+      padding-bottom: 68px;
+    }
+  }
+}
+
+// I{HONE
+@include iphone {
+  .banner{
+    margin-top: 46px;
+    &__image {
+      max-width: 160px;
     }
   
     &__title {
-      /* styles for the banner__title element go here */
-      font-family: $site-font;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 43px;
-      letter-spacing: 0em;
-      text-align: left;
-      margin-bottom: 143px;
-      max-width: 852px;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 52px;
+    }
+    &__green [data-fancybox] {
+      top: -26px;
     }
   
-    &__green{
-      /* styles for the banner__green element go here */
-      background: $color-sage;
-      .container{
-        position: relative;
-      }
-      [data-fancybox]{
-        position: relative;
-        top: -64px;
-        img{
-          @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
-        }
-        &:hover{
-          img{
-            opacity: 0.95;
-            @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
-          }
-          .banner__play{
-            transform: translate(-50%, -50%) scale(1.2);
-            @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
-          }
-        }
-      }
+    &__vimeoImg.img-fluid {
+      width: 100%;
     }
-
-    &__play{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+  
+    &__play {
+      width: 15px;
+    }
+  
+    &__content p {
+      font-size: 20px;
+      line-height: 26px;
+      max-width: 287px;
+    }
+  
+    #scroll-to-top-button {
+      width: 21px;
     }
   
     &__content {
-      /* styles for the banner__content element go here */
-      padding-bottom: 96px;
-      p{
-        color: $color-white;
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 64px;
-        letter-spacing: 0em;
-        max-width: 1024px;
-      }
-    }
-
-    &__goUp{
-       /* styles for the banner__goUp element go here */
-       position: absolute;
-       top: 50%;
-       right: -72px;
-       transform: translate(-50%, -50%);
-       cursor: pointer;
-       @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
-       &:hover{
-        opacity: 0.9;
-        @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
-       }
+      padding-bottom: 23px;
     }
   }
   
+
+}

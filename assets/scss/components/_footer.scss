@@ -14,6 +14,7 @@
             position: absolute;
             left: -25vw;
             width: 25vw;
+            margin-left: 1px;
             background: $color-nightSky;
             display: inline-block;
             height: 100%;
@@ -119,4 +120,77 @@
     .container{
         display: flex;
     }
+}
+
+
+// IPAD PRO
+@include ipad-pro {
+    .footer{
+        &__logo{
+            img{
+                max-width: 193px;
+            }
+        }
+        &__address,
+        &__mail a{
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}
+
+
+// Iphone
+@include iphone{
+    .footer{
+        .container {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        &__left {
+            width: 100%;
+            order: 1;
+        }
+        
+        &__right {
+            width: 100%;
+        }
+        
+        &__left, &__right {
+            padding: 40px;
+            justify-content: center;
+        }
+        
+        &__right--content {
+            text-align: center;
+        }
+        
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        
+        &.site-btn.site-btn--nightSky {
+            font-size: 12px;
+            padding: 8px;
+        }
+        
+        &__left {
+            text-align: center;
+        }
+        
+        &__social-links {
+            justify-content: center;
+        }
+        
+        &__left {
+            padding-bottom: 18px;
+            padding-top: 20px;
+        }
+        
+        &__logo img {
+            max-width: 146px;
+        }
+    }
+    
 }
