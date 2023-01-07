@@ -1,0 +1,227 @@
+.featured-events {
+  /* styles for the featured-events block go here */
+  margin-bottom: 107px;
+
+  &__title {
+    /* styles for the featured-events__title element go here */
+    margin-top: 112px;
+    margin-bottom: 94px;
+    color: $color-nightSky;
+  }
+
+  &__cards {
+    /* styles for the featured-events__cards element go here */
+    display: flex;
+    margin: 0 -24px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(50% - 48px);
+  }
+
+  &__card {
+    /* styles for the featured-events__card element go here */
+    background: $color-persimmon;
+    margin: 24px;
+    position: relative;
+    margin-bottom: 42px;
+
+    &-title {
+      /* styles for the featured-events__card-title element go here */
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 0em;
+      color: $color-nightSky;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      margin-left: 23px;
+    }
+
+    &-open {
+      /* styles for the featured-events__card-open element go here */
+      margin-left: 23px;
+      padding-bottom: 28px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    &-text {
+      /* styles for the featured-events__card-text element go here */
+    }
+
+    &-cta {
+      /* styles for the featured-events__card-cta element go here */
+      margin-top: 13px;
+    }
+  }
+
+  &__front {
+    /* styles for the featured-events__card-front element go here */
+    background: $color-white;
+    transform: translate(24px, -22px);
+    @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+
+    >img {
+      height: 344px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__back {
+    /* styles for the featured-events__back element go here */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-duckling;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(57px, -56px);
+    padding: 39px 33px 30px 33px;
+    @include transition(opacity 0.2s ease-in-out, transform 0.2s ease-in-out);
+
+    img {
+      cursor: pointer;
+      position: absolute;
+      bottom: 30px;
+    }
+
+    p {
+      //styleName: Headings Italic/24px;
+      font-size: 24px;
+      font-weight: 450;
+      line-height: 32px;
+      letter-spacing: 0em;
+    }
+  }
+
+  .site-link {
+    margin-top: 14px;
+  }
+}
+
+
+// TOGGLE STYLING ON OPEN
+.featured-events__card {
+  &.is-open {
+    .featured-events__front {
+      pointer-events: none;
+      opacity: 0;
+      @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+    }
+
+    .featured-events__back {
+      opacity: 1;
+      pointer-events: all;
+      @include transition(opacity 0.3s ease-in-out, transform 0.3s ease-in-out);
+    }
+  }
+}
+
+.featuredEvents__nav {
+  display: none;
+}
+
+// IPAD PRO
+@include ipad-pro {
+  .featured-events__back {
+    transform: translate(24px, -22px);
+  }
+
+  .featured-events__title {
+    margin-top: 90px;
+    margin-bottom: 20px;
+  }
+
+  .featured-events {
+    margin-bottom: 78px;
+  }
+
+  // SLIDER ON SMALLER DEVICES
+  #featured-events {
+    .container {
+      position: relative;
+    }
+
+    .featured-events__item {
+      padding-top: 40px;
+    }
+
+    .featured-events__card {
+      max-width: 466px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .featuredEvents__nav {
+      display: block;
+
+      .featuredEvents__left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 10;
+        cursor: pointer;
+      }
+
+      .featuredEvents__right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 10;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+// Iphone
+@include iphone {
+  .featured-events {
+    margin-bottom: 85px;
+
+    &__title {
+      margin-top: 33px;
+    }
+
+    &__card {
+      max-width: 260px;
+    }
+
+    &__front>img {
+      height: 159px;
+    }
+
+    &__card-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    &__card-open img {
+      width: 22px;
+    }
+
+    .featuredEvents__nav svg {
+      width: 40px;
+    }
+
+    &__back p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__back img {
+      width: 23px;
+    }
+  }
+
+}

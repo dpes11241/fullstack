@@ -1,0 +1,209 @@
+#search-events {
+  background: $color-sage;
+  padding-top: 96px;
+
+  .featured-events {
+    margin-bottom: 0;
+
+    &__card {
+      width: calc(33.33% - 48px);
+    }
+
+    &__front>img {
+      height: 260px;
+    }
+
+    &__card-title {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 20px;
+      margin-top: 26px;
+      margin-left: 25px;
+    }
+
+    &__card-open img {
+      width: 36px;
+    }
+
+    &__back p {
+      font-size: 16px;
+    }
+
+    &__back img {
+      width: 26px;
+    }
+  }
+}
+
+#event-search-pagination {
+  width: 100%;
+}
+#event-search-results > p {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+// SCSS for search bar
+input::placeholder {
+  color: $color-nightSky;
+}
+
+.search-bar {
+  background: $color-grape;
+  margin-bottom: 90px;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translate(16px, -16px);
+  }
+
+  &__input {
+    flex: 1;
+    padding: 15px 22px;
+    border-radius: 0;
+    background: $color-searchInput;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    color: $color-nightSky;
+    border: 0;
+
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  &__button {
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    margin-right: 19px;
+  }
+}
+
+// SCSS for pagination
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 70px;
+  margin-top: 80px;
+
+  &__wrap {
+    background: $color-grape;
+    display: flex;
+  }
+
+  &__wrap-sky {
+    background: $color-skyBlue;
+    transform: translate(14px, -14px);
+    padding: 11px 30px;
+  }
+
+  &__link {
+    display: inline-flex;
+    color: $color-black;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-decoration: none;
+    margin-right: 30px;
+    width: 54px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 34px;
+    border: 3px solid transparent;
+    line-height: 1;
+    @include transition(all 0.3s ease-in-out);
+
+    &.is-active,
+    &:hover {
+      background: $color-persimmon;
+      border-color: $color-grape;
+      @include transition(all 0.3s ease-in-out);
+      color: $color-black;
+    }
+
+    &--prev {
+      margin-right: 44px;
+    }
+
+    &--next {
+      margin-left: 74px;
+    }
+
+    &--prev,
+    &--next {
+      margin-top: -18px;
+    }
+
+    &--num {
+      &.is-active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+// IPAD PRO
+@include ipad-pro {
+  #search-events .featured-events__card {
+    width: calc(50% - 48px);
+  }
+
+  .pagination {
+    padding-bottom: 56px;
+    .pagination__link {
+      margin-right: 20px;
+    }
+    .pagination__link--next {
+        margin-left: 30px;
+    }
+  }
+
+  .search-bar {
+    width: calc(100% - 15px);
+  }
+}
+
+
+// Iphone
+@include iphone {
+  .search-bar {
+    margin-bottom: 46px;
+    &__input {
+      font-size: 18px;
+      height: 52px;
+    }
+  
+    &__button svg {
+      width: 24px;
+    }
+  }
+ 
+  #search-events{
+    .featured-events__card {
+      width: 100%;
+      }
+
+      .featured-events__card-title {
+        font-size: 16px;
+      }
+
+      .featured-events__front>img {
+        height: 210px;
+      }
+  }
+  .pagination {
+    display: none;
+}
+}

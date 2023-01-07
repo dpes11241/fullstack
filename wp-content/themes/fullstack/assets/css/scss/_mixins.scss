@@ -1,0 +1,30 @@
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin desktop {
+    @media only screen 
+      and (min-device-width: 1025px){
+        @content;
+    }
+  }
+
+@mixin ipad-pro {
+    @media only screen 
+      and (max-device-width: 1024px) 
+      and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+    }
+  }
+  
+  @mixin iphone {
+    @media only screen 
+      and (max-device-width: 767px) {
+        @content;
+    }
+  }
+  

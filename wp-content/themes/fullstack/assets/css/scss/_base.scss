@@ -1,0 +1,117 @@
+$site-font: 'Mark Pro';
+$container-width: 1176px;
+
+$color-white: #fff;
+$color-grape: #66619F;
+$color-LightSage: #F8F8F1;
+$color-sage: #87AB87;
+$color-skyBlue: #97DAEB;
+$color-nightSky: #211651;
+$color-persimmon: #EE5A46;
+$color-duckling: #FFDDA2;
+$color-sunflower: #FFA409;
+$color-body: #666666;
+$color-black: #000000;
+$color-ube: #683174;
+$color-field: #777777;
+$color-searchInput: #97DAEB;
+
+
+.site-wrap {
+    // Control site overflow 
+    max-width: 3000px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+h2{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 86px;
+    letter-spacing: 0em;
+    @include ipad-pro {
+        font-size: 46px;
+        line-height: 86px;
+    }
+    @include iphone {
+        font-size: 23px;
+        line-height: 30px;
+    }
+}
+h3{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    @include ipad-pro {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    @include iphone {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+.site-btn{
+    min-width: 148px;
+    border-radius: 0px;
+    padding: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0em;
+    background: $color-sunflower;
+    color: $color-nightSky;
+    text-decoration: none;
+    @include transition(opacity 0.3s ease-in-out);
+    &:hover{
+        color: $color-nightSky;
+        opacity: 0.95;
+        @include transition(opacity 0.3s ease-in-out);
+    }
+    &--nightSky{
+        background: $color-nightSky;
+        color: $color-white;
+        @include transition(all 0.3s ease-in-out);
+        &:hover{
+            color: $color-white;
+            background: rgba($color-nightSky,0.95);
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    @include iphone{
+        font-size: 12px;
+        line-height: 18px;
+        padding: 8px;
+    }
+}
+
+.site-link{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-persimmon;
+    position: relative;
+    text-decoration: none;
+    svg{
+        position: absolute;
+        top: -4px;
+        right: -22px;
+    }
+    &:after{
+        content: "";
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        background: $color-persimmon;
+        bottom: -4px;
+        left: 0;
+    }
+    &:hover{
+     color: $color-persimmon;
+    }
+}

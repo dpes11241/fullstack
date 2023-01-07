@@ -1,0 +1,196 @@
+// Footer block
+.footer {
+    overflow: hidden;
+    // Footer left block
+    &__left {
+        // Footer logo element
+        width: 50%;
+        background: $color-nightSky;
+        padding-top: 44px;
+        padding-bottom: 45px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: -25vw;
+            width: 25vw;
+            margin-left: 1px;
+            background: $color-nightSky;
+            display: inline-block;
+            height: 100%;
+            top: 0;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 30px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    // Footer social links element
+    &__social-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+    }
+
+    // Footer social link element
+    &__social-link {
+        margin-right: 10px;
+        margin-bottom: 16px;
+
+        a {
+            color: #fff;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            background: rgba($color-white, .5);
+            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: $color-nightSky;
+            @include transition(all 0.2s ease-in-out);
+
+            &:hover {
+                color: #ccc;
+                @include transition(all 0.2s ease-in-out);
+            }
+        }
+    }
+
+    // Footer address element
+    &__address {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: $color-white;
+    }
+
+    // Footer mail element
+    &__mail {
+        a {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            @include transition(all 0.2s ease-in-out);
+            color: $color-duckling;
+            &:hover {
+                opacity: 0.9;
+                @include transition(all 0.2s ease-in-out);
+            }
+        }
+    }
+
+
+    // Footer left block
+    &__right {
+        position: relative;
+        background: $color-duckling;
+        display: flex;
+        display: flex;
+        align-items: center;
+        padding-left: 110px;
+        &::after{
+            content: "";
+            position: absolute;
+            right: -25vw;
+            width: 25vw;
+            background: $color-duckling;
+            display: inline-block;
+            height: 100%;
+            top: 0;
+        }
+        // Footer CTA element
+    }
+    // Footer title element
+    &__title {
+        color: $color-nightSky;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 43px;
+        margin-bottom: 12px;
+    }
+    .container{
+        display: flex;
+    }
+}
+
+
+// IPAD PRO
+@include ipad-pro {
+    .footer{
+        &__logo{
+            img{
+                max-width: 193px;
+            }
+        }
+        &__address,
+        &__mail a{
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}
+
+
+// Iphone
+@include iphone{
+    .footer{
+        .container {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        &__left {
+            width: 100%;
+            order: 1;
+        }
+        
+        &__right {
+            width: 100%;
+        }
+        
+        &__left, &__right {
+            padding: 40px;
+            justify-content: center;
+        }
+        
+        &__right--content {
+            text-align: center;
+        }
+        
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        
+        &.site-btn.site-btn--nightSky {
+            font-size: 12px;
+            padding: 8px;
+        }
+        
+        &__left {
+            text-align: center;
+        }
+        
+        &__social-links {
+            justify-content: center;
+        }
+        
+        &__left {
+            padding-bottom: 18px;
+            padding-top: 20px;
+        }
+        
+        &__logo img {
+            max-width: 146px;
+        }
+    }
+    
+}

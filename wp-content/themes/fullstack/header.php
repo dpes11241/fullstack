@@ -22,38 +22,55 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'fullstack' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$fullstack_description = get_bloginfo( 'description', 'display' );
-			if ( $fullstack_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $fullstack_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<div class="site-wrap">
+ <!-- HEADER STARTS -->
+ <nav class="menu">
+        <div class="container">
+          <a class="menu__logo" href="javascript:void(0);">
+            <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/logo.svg" alt="" />
+          </a>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fullstack' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
+          <div class="menu_mobileTrigger">
+            <svg width="95" height="24" viewBox="0 0 95 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text style="
+              font-size: 10px;
+              transform: translate(10px, 1px);
+            " id="active-menu" x="0" y="15" fill="#97DAEB">Why Elevate</text>
+              
+              <path id=""fill-rule="evenodd" clip-rule="evenodd" d="M76.9419 9.55816L81.5 14.1163L86.0581 9.55816L86.9419 10.4419L81.5 15.8838L76.0581 10.4419L76.9419 9.55816Z" fill="#97DAEB"/>
+              <path d="M0.5 12C0.5 5.64873 5.64873 0.5 12 0.5H83C89.3513 0.5 94.5 5.64873 94.5 12C94.5 18.3513 89.3513 23.5 83 23.5H12C5.64872 23.5 0.5 18.3513 0.5 12Z" stroke="#97DAEB"/>
+              </svg>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a
+                class="menu__link menu__link--active"
+                href="javascript:void(0);"
+                >Why Elevate</a
+              >
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="javascript:void(0);">Plan Pillars</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="javascript:void(0);">Latest News</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="javascript:void(0);">Campaign</a>
+            </li>
+          </ul>
+
+		  <?php 
+			// wp_nav_menu(
+			// 	array(
+			// 		'theme_location' => 'menu-1',
+			// 		'menu_id'        => 'primary-menu',
+			// 	)
+			// );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+        </div>
+      </nav>
+
+      <!-- HEADER ENDS -->
+			

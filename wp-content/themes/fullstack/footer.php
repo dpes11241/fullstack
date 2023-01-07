@@ -11,23 +11,69 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fullstack' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'fullstack' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'fullstack' ), 'fullstack', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!-- Footer block -->
+<footer class="footer">
+        <div class="container">
+          <!-- Footer left block -->
+          <div class="footer__left">
+            <!-- Footer logo element -->
+            <div class="footer__logo">
+              <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/footer-logo.svg" alt="Company logo" />
+            </div>
+            <!-- Footer social links element -->
+            <ul class="footer__social-links">
+              <li class="footer__social-link">
+                <a href="javascript:void(0);"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="footer__social-link">
+                <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="footer__social-link">
+                <a href="javascript:void(0);"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="footer__social-link">
+                <a href="javascript:void(0);"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+            <!-- Footer address element -->
+            <div class="footer__address">
+              247 West 35th Street, 8th Floor, New York, NY 10001
+            </div>
+            <!-- Footer mail link element -->
+            <div class="footer__mail">
+              <a
+                href="mailto:info@ELeducation.org
+          "
+                >info@ELeducation.org</a
+              >
+            </div>
+          </div>
+          <!-- Footer right block -->
+          <div class="footer__right">
+            <div class="footer__right--content">
+              <!-- Footer title element -->
+              <h3 class="footer__title">Join the movement</h3>
+              <!-- Footer CTA element -->
+              <div class="footer__cta">
+                <a
+                  href="javascript:void(0);"
+                  class="site-btn site-btn--nightSky"
+                  >Lorem CTA Text</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
+      <!-- FOOTER ENDS -->
+      </div>
 <?php wp_footer(); ?>
 
 </body>
