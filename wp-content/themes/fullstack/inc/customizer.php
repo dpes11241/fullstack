@@ -55,7 +55,7 @@ function fullstack_customize_partial_blogdescription() {
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function fullstack_customize_preview_js() {
-	wp_enqueue_script( 'fullstack-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
-}
-add_action( 'customize_preview_init', 'fullstack_customize_preview_js' );
+// function fullstack_customize_preview_js() {
+// 	wp_enqueue_script( 'fullstack-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+// }
+// add_action( 'customize_preview_init', 'fullstack_customize_preview_js' );
