@@ -1,46 +1,49 @@
+<?php
+$banner_logo = get_field("banner")['banner_logo'];
+$banner_title = get_field("banner")['banner_title'];
+$banner_vimeo_image = get_field("banner")['banner_vimeo_image'];
+$banner_vimeo_url = get_field("banner")['banner_vimeo_url'];
+$banner_subtitle = get_field("banner")['banner_subtitle'];
+?>
+
+
+
 <!-- BANNER STARTS -->
 <div class="banner">
-        <div class="container">
-          <img
-            class="banner__image"
-            src="<?php echo get_stylesheet_directory_uri()?>/assets/images/Elevate logomark.svg"
-            alt="Banner image"
-          />
-          <h1 class="banner__title">
-            Elevate is EL Education’s multi-year plan to increase equity in K-12
-            public education nationwide.
-          </h1>
-        </div>
+  <div class="container">
+    <?php
+    if ($banner_logo) : ?>
+      <img src="<?php echo esc_url($banner_logo['url']); ?>" alt="<?php echo esc_attr($banner_logo['alt']); ?>" />
+    <?php endif; ?>
 
-        <div class="banner__green">
-          <div class="container">
-            <a data-fancybox href="https://vimeo.com/95673122?color=ff0000">
-              <img
-                class="banner__vimeoImg img-fluid"
-                src="<?php echo get_stylesheet_directory_uri()?>/assets/images/Amana-0819-IMG_3323 2.png"
-                alt="vime-img"
-              />
-              <img
-                class="banner__play"
-                src="<?php echo get_stylesheet_directory_uri()?>/assets/images/Action Button.svg"
-                alt="action-btn"
-              />
-            </a>
+    <?php
+    if (isset($banner_title)) {
+      echo sprintf(' <h1 class="banner__title">%s</h1>', $banner_title);
+    }
+    ?>
 
-            <div class="banner__content">
-              <p>
-                Public education is the single best driver to grow our national
-                prosperity, to lift up our culture of innovation, and to nurture
-                America’s global promise and leadership.
-              </p>
-            </div>
-            <img
-              id="scroll-to-top-button"
-              class="banner__goUp"
-              src="<?php echo get_stylesheet_directory_uri()?>/assets/images/go-up.svg"
-              alt="go-up"
-            />
-          </div>
-        </div>
+  </div>
+
+  <div class="banner__green">
+    <div class="container">
+      <a data-fancybox href="<?php echo $banner_vimeo_url; ?>">
+        <?php
+        if ($banner_vimeo_image) : ?>
+          <img src="<?php echo esc_url($banner_vimeo_image['url']); ?>" alt="<?php echo esc_attr($banner_vimeo_image['alt']); ?>" />
+        <?php endif; ?>
+
+        <img class="banner__play" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Action Button.svg" alt="action-btn" />
+      </a>
+
+      <div class="banner__content">
+        <?php
+        if (isset($banner_subtitle)) {
+          echo sprintf('<p>%s</p>', $banner_subtitle);
+        }
+        ?>
       </div>
-      <!-- BANNER ENDS -->
+      <img id="scroll-to-top-button" class="banner__goUp" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/go-up.svg" alt="go-up" />
+    </div>
+  </div>
+</div>
+<!-- BANNER ENDS -->

@@ -20,8 +20,8 @@
             "sub_fields": [
                 {
                     "key": "field_63b8f0fe299fb",
-                    "label": "Banner Image",
-                    "name": "banner_image",
+                    "label": "Banner Logo",
+                    "name": "banner_logo",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -149,5 +149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673064770
+    "modified": 1673064930
 }

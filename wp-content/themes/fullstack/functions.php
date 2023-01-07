@@ -190,6 +190,8 @@ if (defined('JETPACK__VERSION')) {
 }
 
 
+
+
 // Register custom post type for events
 function register_event_post_type()
 {

@@ -76,7 +76,7 @@
 
         </div>
         <div class="text-center">
-            <a href="assets/files/dummy.pdf" download class="site-link">
+            <a href="<?php echo get_stylesheet_directory_uri() ?>/assets/files/dummy.pdf" download class="site-link">
                 Download our campaign deck to learn more
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
