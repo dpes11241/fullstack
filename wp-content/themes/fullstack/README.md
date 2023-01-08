@@ -68,4 +68,9 @@
 <ul>
     <li> Static Proejct link from github pages: https://dpes11241.github.io/fullstack/ </li>
     <li> Github project link with wordpress project folder and fullstack.sql database: https://github.com/dpes11241/fullstack </li>
+    <li> Sql filename: fullstack.sql which is located in root folder </li>
+    <li> SQL credentials: <br/>
+          user: fullstack
+          pass: PWlIaZ&uMEY)!3c@M8
+    </li>
 </ul>
