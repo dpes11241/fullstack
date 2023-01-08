@@ -13,7 +13,7 @@ $banner_subtitle = get_field("banner")['banner_subtitle'];
   <div class="container">
     <?php
     if ($banner_logo) : ?>
-      <img src="<?php echo esc_url($banner_logo['url']); ?>" alt="<?php echo esc_attr($banner_logo['alt']); ?>" />
+      <img class="banner__image" src="<?php echo esc_url($banner_logo['url']); ?>" alt="<?php echo esc_attr($banner_logo['alt']); ?>" />
     <?php endif; ?>
 
     <?php
@@ -29,7 +29,7 @@ $banner_subtitle = get_field("banner")['banner_subtitle'];
       <a data-fancybox href="<?php echo $banner_vimeo_url; ?>">
         <?php
         if ($banner_vimeo_image) : ?>
-          <img src="<?php echo esc_url($banner_vimeo_image['url']); ?>" alt="<?php echo esc_attr($banner_vimeo_image['alt']); ?>" />
+          <img class="banner__vimeoImg" src="<?php echo esc_url($banner_vimeo_image['url']); ?>" alt="<?php echo esc_attr($banner_vimeo_image['alt']); ?>" />
         <?php endif; ?>
 
         <img class="banner__play" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Action Button.svg" alt="action-btn" />
