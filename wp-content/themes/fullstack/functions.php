@@ -290,7 +290,6 @@ function event_search_shortcode($atts)
     $form .= '<div id="event-search-results"></div>';
 
     // Enqueue scripts and styles
-    wp_enqueue_style('event-search-style', get_template_directory_uri() . '/event-search.css');
     wp_enqueue_script('event-search-script', get_template_directory_uri() . '/event-search.js', array('jquery'), '1.0', true);
     wp_localize_script('event-search-script', 'event_search_ajax', array(
         'ajax_url' => admin_url('admin-ajax.php'),

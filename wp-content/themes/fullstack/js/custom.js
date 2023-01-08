@@ -10,7 +10,7 @@ var MyNamespace = {
   toggleCard: function () {
     // Get the child element
     $(function () {
-      $(".card-open").click(function () {
+      $("body").on('click', '.card-open', function () {
         var $this = $(this);
         $(this).parents(".featured-events__card").addClass("is-open");
         $("html, body").animate(
@@ -21,7 +21,7 @@ var MyNamespace = {
           0
         );
       });
-      $(".featured-events__card-close").click(function () {
+      $("body").on('click','.featured-events__card-close', function () {
         var $this = $(this);
         $(this).parents(".featured-events__card").removeClass("is-open");
       });

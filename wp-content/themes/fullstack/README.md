@@ -43,6 +43,12 @@
 
 <p align="left">✨Events post type<br>✨Featured event section<br>✨Search Event section<br>✨Dynamic events, featured section , search section and banner</p>
 
+<p> Custom coded js files with javascript, jquery and ajax for event search filter: </p>
+<ul>
+  <li>\wp-content\themes\fullstack\js\custom.js </li>
+  <li>\wp-content\themes\fullstack\event-search.js </li>
+</li>
+
 ###
 
 <h2 align="left">Shortcode for event search using ajax:</h2>

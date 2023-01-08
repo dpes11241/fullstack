@@ -40,9 +40,12 @@ jQuery(document).ready(function($) {
             success: function(data) {
                 $('#event-search-results').html('<p>Searching events...</p>');
                 $('#event-search-results').html(data);
+                if( !$('#event-search-results > *').length){
+                    $('#event-search-results').html('<p>No results found. Please try different keyword...</p>');
+                }
             },
             error: function(error) {
-                console.log(error);
+                $('#event-search-results').html('<p>Error</p>');
             },
         });
     }
