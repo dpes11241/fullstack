@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">I've creted a template with name  Fullstack.</p>
+<p align="left">I've created a template with name  Fullstack.</p>
 
 ###
 
