@@ -6,11 +6,35 @@ var MyNamespace = {
       .addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
+
+      // Set the amount of scrolling before the button appears
+      const SCROLL_THRESHOLD = 300;
+
+      // Hide the button by default
+      document.getElementById('scroll-to-top-button').style.display = 'none';
+
+      // Listen for scroll events
+      window.onscroll = function() {
+        // Get the current scroll position
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Show the button if the user has scrolled past the threshold
+        if (scrollTop > SCROLL_THRESHOLD) {
+          document.getElementById('scroll-to-top-button').style.display = 'block';
+        } else {
+          document.getElementById('scroll-to-top-button').style.display = 'none';
+        }
+      }
+
+      // Add a function to scroll to the top of the page
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
   },
   toggleCard: function () {
     // Get the child element
     $(function () {
-      $(".card-open").click(function () {
+      $("body").on('click', '.card-open', function () {
         var $this = $(this);
         $(this).parents(".featured-events__card").addClass("is-open");
         $("html, body").animate(
@@ -21,7 +45,7 @@ var MyNamespace = {
           0
         );
       });
-      $(".featured-events__card-close").click(function () {
+      $("body").on('click','.featured-events__card-close', function () {
         var $this = $(this);
         $(this).parents(".featured-events__card").removeClass("is-open");
       });
@@ -61,7 +85,9 @@ var MyNamespace = {
         });
       }
     }else{
-      getSliderElem.slick('unslick');
+      if( $('.featured-events__cards').hasClass('slick-initialized') ){
+        getSliderElem.slick('unslick');
+      }
     }
 
       // Goto previous slide
@@ -80,6 +106,9 @@ var MyNamespace = {
         $(this).toggleClass('is-open')
         $('.menu__list').slideToggle();
       })
+  },
+  aosAnimation: function(){
+    AOS.init();
   }
 };
 
@@ -92,4 +121,5 @@ window.addEventListener('resize', function(event){
   MyNamespace.featuredEvents__cards();
 });
 MyNamespace.mobileToggle();
+MyNamespace.aosAnimation();
 
