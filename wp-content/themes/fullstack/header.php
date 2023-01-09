@@ -27,7 +27,7 @@
  <!-- HEADER STARTS -->
  <nav class="menu">
         <div class="container">
-          <a class="menu__logo" href="javascript:void(0);">
+          <a data-aos="fade-up" class="menu__logo" href="javascript:void(0);">
             <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/logo.svg" alt="" />
           </a>
 
@@ -42,7 +42,7 @@
               <path d="M0.5 12C0.5 5.64873 5.64873 0.5 12 0.5H83C89.3513 0.5 94.5 5.64873 94.5 12C94.5 18.3513 89.3513 23.5 83 23.5H12C5.64872 23.5 0.5 18.3513 0.5 12Z" stroke="#97DAEB"/>
               </svg>
           </div>
-          <ul class="menu__list">
+          <ul class="menu__list" data-aos="fade-up">
             <li class="menu__item">
               <a
                 class="menu__link menu__link--active"

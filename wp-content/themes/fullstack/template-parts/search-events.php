@@ -1,6 +1,6 @@
 
 <!-- SEARCH EVENTS STARTS -->
-<section id="search-events">
+<section id="search-events" data-aos="fade-up">
   <div class="container">
     <!-- HTML for search bar -->
 

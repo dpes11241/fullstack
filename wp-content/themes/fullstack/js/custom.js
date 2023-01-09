@@ -6,6 +6,30 @@ var MyNamespace = {
       .addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
+
+      // Set the amount of scrolling before the button appears
+      const SCROLL_THRESHOLD = 300;
+
+      // Hide the button by default
+      document.getElementById('scroll-to-top-button').style.display = 'none';
+
+      // Listen for scroll events
+      window.onscroll = function() {
+        // Get the current scroll position
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Show the button if the user has scrolled past the threshold
+        if (scrollTop > SCROLL_THRESHOLD) {
+          document.getElementById('scroll-to-top-button').style.display = 'block';
+        } else {
+          document.getElementById('scroll-to-top-button').style.display = 'none';
+        }
+      }
+
+      // Add a function to scroll to the top of the page
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
   },
   toggleCard: function () {
     // Get the child element
@@ -82,6 +106,9 @@ var MyNamespace = {
         $(this).toggleClass('is-open')
         $('.menu__list').slideToggle();
       })
+  },
+  aosAnimation: function(){
+    AOS.init();
   }
 };
 
@@ -94,4 +121,5 @@ window.addEventListener('resize', function(event){
   MyNamespace.featuredEvents__cards();
 });
 MyNamespace.mobileToggle();
+MyNamespace.aosAnimation();
 

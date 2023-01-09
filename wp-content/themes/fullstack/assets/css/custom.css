@@ -1,4 +1,6 @@
 .site-wrap {
+  max-width: 3000px;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -191,12 +193,15 @@ h3 {
     padding: 32px 0;
   }
 }
-.menu_mobileTrigger,
-.menu__list {
+.menu_mobileTrigger {
   display: none;
 }
 
 @media only screen and (max-device-width: 767px) {
+  .menu__list {
+    display: none;
+  }
+
   nav.menu {
     padding: 13px 0;
   }
@@ -338,6 +343,7 @@ h3 {
   }
   .banner__vimeoImg {
     max-width: 678px;
+    width: 100%;
   }
   .banner__content p {
     font-size: 36px;
@@ -529,6 +535,7 @@ h3 {
     max-width: 466px;
     margin: 0 auto;
     margin-bottom: 30px;
+    max-width: 75vw;
   }
   #featured-events .featuredEvents__nav {
     display: block;
@@ -887,6 +894,18 @@ h3 {
   width: 26px;
 }
 
+#event-search-pagination {
+  width: 100%;
+}
+
+#event-search-results > p {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30vh;
+}
+
 input::placeholder {
   color: #211651;
 }
@@ -972,6 +991,21 @@ input::placeholder {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: #000000;
+}
+.pagination__link--prev, .pagination__link--next {
+  background: transparent;
+  border: 0;
+  opacity: 1;
+  outline: 0;
+}
+.pagination__link--prev:hover, .pagination__link--next:hover {
+  background: transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
 }
 .pagination__link--prev {
   margin-right: 44px;

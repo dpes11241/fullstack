@@ -1,8 +1,8 @@
 <!-- OUR VISION STARTS -->
 <section class="vision">
         <div class="container">
-          <h2 class="vision__title">Our Vision</h2>
-          <div class="vision__content">
+          <h2 class="vision__title" data-aos="fade-up">Our Vision</h2>
+          <div class="vision__content" data-aos="fade-up">
             <p>
               EL Education knows good schools. For thirty years, we’ve
               collaboratively designed some of the most successful schools in
@@ -21,7 +21,7 @@
             </p>
           </div>
 
-          <div class="vision__tab">
+          <div class="vision__tab" data-aos="fade-up">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button

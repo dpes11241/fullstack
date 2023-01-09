@@ -2,7 +2,7 @@
  <div class="news-slider">
         <div class="container">
           <div class="news-slider__title">
-            <h3>The Latest News ipsum dolor sit amet</h3>
+            <h3 data-aos="fade-up">The Latest News ipsum dolor sit amet</h3>
             <div class="news-slider__nav">
               <div class="news-slider__left">
                 <svg
@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <div class="news-slider__items">
+          <div class="news-slider__items" data-aos="fade-up">
             <div class="item">
               <div class="news-slider__item">
                 <div class="news-slider__image-col">
